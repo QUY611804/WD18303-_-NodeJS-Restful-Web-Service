@@ -1,0 +1,28 @@
+{
+  "name": "asm1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npm-watch",
+    "start": "node index.js"
+  },
+  "watch": {
+    "start": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QUY611804/WD18303_NodeJS-Restful-Web-Service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QUY611804/WD18303_NodeJS-Restful-Web-Service/issues"
+  },
+  "homepage": "https://github.com/QUY611804/WD18303_NodeJS-Restful-Web-Service#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.3"
+  }
+}

@@ -1,0 +1,101 @@
+<%-include ('../includes/admin_slibar.ejs'); %>
+  <main class="main-content position-relative max-height-vh-100 h-100 mt-1 border-radius-lg ">
+    <!-- Navbar -->
+    <%-include ('../includes/admin_navbar.ejs'); %>
+      <!-- End Navbar -->
+      <div class="container-fluid py-4">
+        <div class="row">
+          <div class="col-12">
+            <div class="card mb-4">
+              <div class="card-header pb-0">
+                <h6>Danh mục sản phẩm</h6>
+              </div>
+              <div class="card-body px-0 pt-0 pb-2">
+                <div class="table-responsive p-0">
+                  <table class="table align-items-center mb-0">
+                    <thead>
+                      <tr>
+
+                        <th class="text-uppercase text-secondary text-xs font-weight-bolder text-danger ">ID</th>
+                        <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 ps-2 text-danger">
+                          Hình ảnh
+                        </th>
+                        <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 ps-2 text-danger">
+                          Tên</th>
+                        <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 ps-2 text-danger">
+                          Giá
+                        </th>
+                        <th
+                          class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7 text-danger">
+                          Số lượng</th>
+                        <th
+                          class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7 text-danger">
+                          Thời gian</th>
+                        <th class="text-secondary opacity-7"></th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <% for (let products of product ) {%>
+                        <tr>
+                          <td class="center">
+                            <div class="d-flex flex-column justify-content-center ps-2">
+                              <p class="text-dark">
+                                <%= product.id%>
+                              </p>
+                            </div>
+                          </td>
+
+                          <td>
+                            <div class="d-flex px-2 py-1">
+                              <div class="d-flex flex-column justify-content-center">
+                                <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user1">
+                              </div>
+                            </div>
+                          </td>
+
+                          <td>
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">
+                                <%= product.name%>
+                              </h6>
+
+                            </div>
+                          </td>
+
+                          <td class="  font-weight-bold">
+                            <%= product.price%> VND
+                          </td>
+
+                          <td class="align-middle text-center  font-weight-bold">
+                            <%= product.Quantity%>
+                          </td>
+
+                          <td class="align-middle text-center">
+                            <span class="text-secondary  font-weight-bold">
+                              <%= product.createdAt%>
+                            </span>
+                          </td>
+
+                          <td class="align-middle">
+                            <a href="javascript:;" class="text-secondary font-weight-bold text-xs" products-toggle="tooltip"
+                              products-original-title="Edit user">
+                              <button type="button" class="btn btn-warning">Sửa</button>
+                              <button type="button" class="btn btn-danger">Xóa</button>
+
+                            </a>
+                          </td>
+                        </tr>
+
+                        <% }%>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </main>
+  <%-include ('../includes/admin_footer.ejs'); %>
